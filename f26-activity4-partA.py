@@ -44,7 +44,7 @@ if number_of_months > 12:
     print("Number of Years: " + str(number_of_years))
 else:
     print("Number of Months: " + str(number_of_months))
-print("TOTAL INVESTMENT: $" + format(account_balance, ".2f"))
+print("Total Investment: $" + format(account_balance, ".2f"))
 
 # EXPECTED OUTPUT
 # GOAL: $1,000,000
