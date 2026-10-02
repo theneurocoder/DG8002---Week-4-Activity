@@ -1,9 +1,6 @@
-# Complete the TODOs using the Python concepts introduced in class.
-# Run this file to check your result.  
-
 # DG8002 - F26 - Activity 4
-# Author Name: 
-# Date: 
+# Author Name: Abdullah Alhomoud
+# Date: 2026-10-02
 
 # SCENARIO
 # You are wanting to save money for a particular purchase.
@@ -16,18 +13,38 @@
 #         - The amount of money as your base investment
 #         - The annual interest rate
 #         - The amount of money you want to deposit into the account every month (if any)
+savings_goal = float(input("What is your desired savings goal? $"))
+base_investment = float(input("What is your base investment? $"))
+interest_rate = float(input("What is the percentage of the annual interest rate? "))
+monthly_deposit = float(input("How much do you want to deposit into the account every month? $"))
 
 # TODO 2: Create variables to hold number of months and current balance of the account
+number_of_months = 0
+account_balance = base_investment
 
 # TODO 3: Create a loop that will run until you have made at least your desired savings goal
+while account_balance < savings_goal:
 
     # TODO 4: Calculate amount of money earned that month through interest on your base investment and monthly deposit
+    interest_earned = account_balance * (interest_rate / 100 / 12)
+    account_balance = account_balance + interest_earned + monthly_deposit
 
     # TODO 5: Increment the number of times the loop has run so you can track how many months it takes to hit your goal
+    number_of_months += 1
 
 # TODO 6:  Print how long it will take for your investment to mature.  
-#          If the duration is longer than 12 months, print your result in years.  Otherwise, print the result in months.
-
+#          If the duration is longer than 12 months, print your result in years.  Otherwise, print the result in months.75
+print("GOAL: $" + format(savings_goal, ".2f") +
+      "\nINTEREST: " + str(interest_rate) + "%" +
+      "\nBASE: $" + format(base_investment, ".2f") +
+      "\nMONTHLY DEPOSIT: $" + format(monthly_deposit, ".2f") +
+      "\n")
+if number_of_months > 12:
+    number_of_years = number_of_months / 12
+    print("Number of Years: " + str(number_of_years))
+else:
+    print("Number of Months: " + str(number_of_months))
+print("TOTAL INVESTMENT: $" + format(account_balance, ".2f"))
 
 # EXPECTED OUTPUT
 # GOAL: $1,000,000
@@ -38,4 +55,3 @@
 # Number of Months: 177
 # Number of Years: 87.75
 # Total Investment: $1,034,906.36
-
