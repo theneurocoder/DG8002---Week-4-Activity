@@ -36,12 +36,12 @@ print("Average temperature: " + format(averageTemperature, ".2f"))
 print("Days above 23: " + str(daysAbove23))
 
 # TODO 7: Print the -> index <- of the highest temperature.
-hottestDay = temperatures.index(max(temperatures)) + 1
+hottestDay = temperatures.index(max(temperatures))
 print("Highest Temperature Index: " + str(hottestDay))
 
 # EXPECTED OUTPUT
 # Average Temperature: 21.57
 # Days Above 23:  3
-# Highest Temperature Index: 5  
+# Highest Temperature Index: 4  
 
 
