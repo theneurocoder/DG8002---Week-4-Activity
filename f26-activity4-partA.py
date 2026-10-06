@@ -52,6 +52,6 @@ print("Total Investment: $" + format(account_balance, ".2f"))
 # BASE: $1,000
 # MONTHLY DEPOSIT: $100
 #
-# Number of Months: 177
+# Number of Months: 1053
 # Number of Years: 87.75
-# Total Investment: $1,034,906.36
+# Total Investment: $1,000,861.53
